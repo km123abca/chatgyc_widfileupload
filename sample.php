@@ -126,6 +126,15 @@
      			document.querySelector('#ta').value=shapelinks(document.querySelector('#ta').value);
      		}
 
+        function checkima()
+            {
+                var elem=document.querySelector('#in').value;
+                if (elem.match(/.jpg/g)=='.jpg')
+                    alert('That was an image');
+                else
+                    alert('That was not an image');
+            }
+
 
     
 </script>
@@ -138,12 +147,15 @@
 <input id='in' name='in' type='text' size=100>
 <button type='button' id='bu' onclick='matcher()'>click</button>
 <button type='button' id='ext' onclick='ext2()'>check for link</button>
+<button type='button' id='imslot' onclick='checkima()'>check if image</button>
 <br>
 <textarea id='ta' rows=10 cols=40></textarea>
 <br>
 <button type='button' id='buz' onclick="procw()">filter</button>
 <br>
 <textarea id='ta2' rows=10 cols=40></textarea>
+
+<b5></b5>
 
 <script>
 <?php

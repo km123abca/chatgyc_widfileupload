@@ -84,6 +84,13 @@ function checkSignOut(res)
      		y=inptex.indexOf(t1,x);
      		st_in=y+1;
      		midstr=inptex.substr(x,y-x);
+     		if (midstr.match(/.JPG/g)=='.JPG')
+     			{
+     			var imtag="<img src='"+midstr+"' alt='no preview' height='100' width='150'>";
+     			midstr_mod="<br><a href='"+midstr+"' target=blank>"+imtag+"</a>";
+
+     			}
+     		else
      		midstr_mod="<a href='"+midstr+"' target=blank>attachment</a>";
      		//alert(t1+midstr+t1);
      		//alert(midstr_mod);
@@ -110,6 +117,7 @@ function showMessages(res)
 	//alert(msgarr);
 	messages.innerHTML=msg2pr;
 	chatBox.appendChild(messages);
+	if (msg2pr!='')
 	chatBox.scrollTop=chatBox.scrollHeight;
 	}
 
